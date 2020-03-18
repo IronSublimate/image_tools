@@ -1,5 +1,6 @@
 /*
 !/scripts/
+/scripts/__pycache__/
 !README.md
 !LICENSE
 !.gitignore
