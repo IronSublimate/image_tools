@@ -1,0 +1,7 @@
+{
+    "data_folder": "in2_car",
+    "img_folder": "JPEGImages",
+    "annotation_folder": "Annotations",
+    "split_folder": "ImageSets/Main",
+    "yolo_labels_folder": "labels"
+}
