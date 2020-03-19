@@ -47,14 +47,14 @@ def main(args: list):
     else:
         data_folder = Path(folder.data_folder())
     label_path = Path(__file__).parent.parent / data_folder / folder.annotation_folder()  # 标记的数据
-    name_path = Path(__file__).parent.parent / data_folder / folder.split_folder()   # 用于训练和测试样本的名字文件的路径
+    name_path = Path(__file__).parent.parent / data_folder / folder.split_folder()  # 用于训练和测试样本的名字文件的路径
     list_path = list(f'{f.stem}\n' for f in label_path.glob("*.xml"))
     train_list, test_list = split(list_path, True, ratio)
     print(train_list)
     print(test_list)
     for name in ('train', 'test'):
         pth = name_path / f"{name}.txt"
-        with pth.open('wb') as f:
+        with pth.open('w', newline='\n') as f:
             f.writelines(eval(f"{name}_list"))
 
 

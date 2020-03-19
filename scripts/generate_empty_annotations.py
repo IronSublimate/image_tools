@@ -55,7 +55,7 @@ def main(args: list):
             # print(xml)
             filename = f'{img_path.stem}.xml'
             # print(filename)
-            with (label_folder_path / filename).open('w') as f:
+            with (label_folder_path / filename).open('w',newline='\n') as f:
                 f.write(xml)
 
 
