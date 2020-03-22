@@ -30,3 +30,6 @@ def split_folder():
 
 def yolo_labels_folder():
     return __tree["yolo_labels_folder"]
+
+def coco_labels_folder():
+    return __tree["coco_labels_folder"]
