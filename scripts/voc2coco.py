@@ -286,7 +286,7 @@ def main(args: List[str]):
             # 图片是后缀名且文件名在对应标签里
             if image_xml.stem in image_ids:
                 xmls.append(image_xml)
-        print(xmls)
+        # print(xmls)
         convert(xmls, coco_labels_path / f'{name}.json')
 
 
