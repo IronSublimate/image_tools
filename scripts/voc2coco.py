@@ -198,7 +198,7 @@ def convert(xml_files, json_file):
         if len(path) == 1:
             filename = os.path.basename(path[0].text)
         elif len(path) == 0:
-            filename = get_and_check(root, "filename", 1).text
+            filename = os.path.basename(get_and_check(root, "filename", 1).text)
         else:
             raise ValueError("%d paths found in %s" % (len(path), xml_file))
         ## The filename must be a number
