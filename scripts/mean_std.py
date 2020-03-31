@@ -33,8 +33,8 @@ def main(args: list):
         data_folder_str = folder.data_folder()
     image_path = Path(__file__).parent.parent / data_folder_str / folder.img_folder()  # 图片数据
     mean, standard = compute(image_path)
-    print("mean", mean)
-    print("std", standard)
+    print("mean", str(mean).replace(' ',','))
+    print("std", str(standard).replace(' ',','))
 
 
 if __name__ == "__main__":
