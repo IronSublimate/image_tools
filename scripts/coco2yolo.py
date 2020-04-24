@@ -59,7 +59,8 @@ def get_map_id(coco: COCO, cat_id):
 
 # 生成图像路径数据，返回生成的txt的路径
 def gen_img_path_txt(dataset_type: str, year: str, coco: COCO, img_dir: Path, save_dir: Path) -> Path:
-    img_path = img_dir / (dataset_type + year)
+    # img_path = img_dir / (dataset_type + year)
+    img_path = save_dir / "JPEGImages"
     txt_path = save_dir / f"coco{year}_{dataset_type}.txt"  # e.g.coco2017_val.txt
     with txt_path.open("w", newline='\n') as f:
         for id in coco.imgs:
