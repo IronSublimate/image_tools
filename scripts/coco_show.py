@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+# 展示COCO的结果图片
+
 from pathlib import Path
 
 from pycocotools.coco import COCO
